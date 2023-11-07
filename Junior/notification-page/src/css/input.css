@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --red: hsl(1, 54%, 51%);
+  --blue: hsl(219, 85%, 26%);
+
+  --veryLightGrayishBlue: hsl(210, 60%, 98%);
+  --lightGrayishBlue1: hsl(211, 68%, 94%);
+  --lightGrayishBlue2: hsl(205, 33%, 90%);
+  --grayishBlue: #6a717e;
+  --darkGrayishBlue: #67707e;
+  --veryDarkBlue: hsl(224, 21%, 14%);
+  --shadowActive: hsla(0, 0%, 0%, 0.102);
+  --shadowMainCard: hsl(0deg 0% 0% / 6%);
+
+  /* clamps */
+  --tclamp2: clamp(1.25rem, 1.071rem + 0.476vw, 1.5rem);
+  --tclamp3: clamp(0.875rem, 0.786rem + 0.238vw, 1rem);
+  --tclamp4: clamp(0.75rem, 0.643rem + 0.286vw, 0.9rem);
+  --pxclamp1: clamp(1.3rem, 0.8rem + 1.333vw, 2rem);
+  --pyclamp1: clamp(2rem, 1.786rem + 0.571vw, 2.3rem);
+}
+
+/* Text Clamps */
+.tclamp2 {
+  font-size: var(--tclamp2);
+}
+.tclamp3 {
+  font-size: var(--tclamp3);
+}
+.tclamp4 {
+  font-size: var(--tclamp4);
+}
+
+.unread-shadow {
+  @apply shadow-[0px_1px_6px_3px_var(--shadowActive)];
+}
+.unread-border {
+  @apply border-0 border-t-2 border-[var(--red)];
+}
+
+.read-shadow {
+  @apply shadow-[0px_0px_3px_0px_var(--shadowActive)];
+}
+.status-on {
+  @apply rounded-full border-2 border-green-500;
+}
+
+/* ---------------- Relative Fonts -----------------*/
+/* Normal */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  src:
+    local("Plus Jakarta Sans"),
+    url(/assets/fonts/static/PlusJakartaSans-Medium.ttf) format("truetype");
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  src:
+    local("Plus Jakarta Sans"),
+    url(/assets/fonts/static/PlusJakartaSans-ExtraBold.ttf) format("truetype");
+  font-display: swap;
+}
+
+/* Animations */
+@keyframes animate-right {
+  0% {
+    transform: translateX(-3%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate-right {
+  animation-name: animate-right;
+  animation-duration: 1s;
+}

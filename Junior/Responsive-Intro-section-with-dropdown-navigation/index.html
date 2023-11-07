@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Intro section with dropdown navigation" />
+  <meta name="keywords" content="Frontend Mentor, Intro section with dropdown navigation, _nehal, Responsive Designs" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Linking Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Linking Script file -->
+  <script defer src="js/script.js"></script>
+
+  <title>Intro section with dropdown navigation</title>
+</head>
+
+<body>
+  <main>
+
+    <div class="main-container ">
+
+      <!-- 
+          - #HEADER SECTION 
+          -->
+      <header>
+        <nav class="navbar__nav flex-row flex-jsa">
+
+          <!-- 
+                -navbar brand
+            --->
+          <div class="navbar__brand ">
+            <a href="/"><img class="logo" src="images/logo.svg" alt="Home - Snap" /></a>
+
+
+          </div>
+
+
+          <div class="side_bar ">
+
+            <!-- 
+                -navbar hamburger
+              --->
+            <button id="open-btn" alt="hamburger" class="hamburger" aria-label="Open Nav Toggler" title="Open Nav Toggler">
+              <img src="images/icon-menu.svg" alt="">
+              </button>
+
+
+            <div class="menu hidden flex-c-rev">
+              <ul class="menu__list flex-col fs-medium">
+
+                <li class="menu__content">
+                  <ul class="flex-col">
+                     <!-- 
+                -navbar brand
+            --->
+          <div class="navbar__brand-desk hidden">
+            <a href="/"><img class="logo" src="images/logo.svg" alt="Home - Snap" /></a>
+
+
+          </div>
+                    <li class="li-item flex-col">
+                      <div class="wrapper__dropdown-head flex-row menu__head">
+                        <button class="heading flex-row flex-start ">Features</button>
+                      <button class="dropdown-head"><img class="arrow" src="images/icon-arrow-down.svg" alt="Toggle Arrow"></button>
+                      </div>
+                      <ul class="drop-down flex-col drop1">
+                        <li class="flex-row drop-down__items li-item">
+                          <a href="#" class="flex-row">
+                            <img  src="images/icon-todo.svg" alt="" width="15" height="15">
+                          <p>Todo List</p>
+                         </a>
+                        </li>
+                        <li class="flex-row drop-down__items li-item">
+                          <a href="#" class="flex-row">
+                            <img  src="images/icon-calendar.svg" alt="" width="15" height="15">
+                          <p>Calender</p>
+                          </a>
+                        </li>
+                        <li class="flex-row drop-down__items li-item">
+                          <a href="#" class="flex-row">
+                            <img  src="images/icon-reminders.svg" alt="" width="15" height="15">
+                          <p>Reminders</p>
+                          </a>
+                        </li>
+                        <li class="flex-row drop-down__items li-item">
+                          <a href="#" class="flex-row">
+                            <img  src="images/icon-planning.svg" alt="" width="15" height="15">
+                          <p>Plannings</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="li-item flex-col">
+                      <div class="wrapper__dropdown-head flex-row menu__head">
+                        <button class="heading flex-row flex-start">Company</button>
+                      <button class="dropdown-head"><img class="arrow"src="images/icon-arrow-down.svg" alt="Toggle Arrow"></button>
+                      </div>
+                      <ul class="drop-down flex-col drop2">
+                        <li class="li-item drop-down__items">
+                          <a href="#" >History</a>
+                        </li>
+                        <li class="li-item drop-down__items">
+                          <a href="#">Our Team</a>
+                        </li>
+                        <li class="li-item drop-down__items">
+                          <a href="#">Blog</a>
+                        </li>
+    
+                      </ul>
+                    </li>
+                    <li class="li-item flex-row menu__head">
+                      <a href="#" class="heading ">Careers</a>
+                    </li>
+                    <li class="li-item flex-row menu__head">
+                      <a href="#" class="heading ">About</a>
+    
+                    </li>
+                  </ul>
+                </li>
+                <li class="btn fs-medium flex-col flex-c">
+                  <a class="btn-light flex-row flex-c login" href="" #>Login</a>
+                
+                  <a class="btn-light flex-row flex-c register" href="" #>Register</a>
+                </li>
+              </ul>
+
+              <!-- 
+                -navbar close button
+              --->
+
+              <button id="close-btn" class="flex-row flex-end" aria-label="Close Nav Toggler" title="Close Nav Toggler">
+                <img src="images/icon-close-menu.svg" alt="" />
+              </button>
+
+            </div>
+
+          </div>
+        </nav>
+        <picture class="wrapper__header-bg flex-row flex-c">
+          <source media="(min-width: 800px)" srcset="images/image-hero-desktop.png">
+          <img class="header-bg" src="images/image-hero-mobile.png"
+            alt="Illustration banner with a man having a laptop in his hand.">
+        </picture>
+      </header>
+
+      <main>
+        <!--
+            - #ABOUT SECTION 
+          -->
+        <section class="about t-center">
+          <h1 class="heading fs-large">Make remote work</h1>
+          <div class="wrapper__description center">
+            <p class="description fs-medium">
+              Get your team in sync, no matter your
+              location. Streamline processes, create
+              team rituals, and watch productivity soar.</p>
+          </div>
+          <a class="btn-dark fw-700 fs-medium" href="" #>Learn more</a>
+
+        </section>
+       
+        <footer class="flex-row flex-c">
+          <img src="images/client-databiz.svg" alt="">
+          <img src="images/client-audiophile.svg" alt="">
+          <img src="images/client-meet.svg" alt="">
+          <img src="images/client-maker.svg" alt="">
+         
+        </footer>
+
+    </div>
+   
+  </main>
+</body>
+
+</html>

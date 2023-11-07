@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Notification Page" />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Notification Page , nehal, Responsive Designs"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Notification Page</title>
+
+    <!-- Linking Stylesheet -->
+    <link rel="stylesheet" href="./src/css/output.min.css" />
+
+    <!-- Linking Script File -->
+    <script defer src="./src/js/script.js"></script>
+  </head>
+
+  <body
+    class="mx-auto flex min-h-screen items-center justify-center bg-[var(--veryLightGrayishBlue)] font-['Plus_Jakarta_Sans',sans-serif] md:max-w-[730px]"
+  >
+    <main
+      class="overflow-hidden rounded-xl bg-white px-4 py-6 shadow-[0px_0px_5rem_6px_var(--shadowMainCard)] md:px-7"
+    >
+      <h1 class="sr-only">Notification Page</h1>
+      <div class="notify-tray flex items-center justify-between pb-6 font-bold">
+        <div class="notify-count flex gap-2">
+          <h2 class="tclamp2">Notifications</h2>
+          <div
+            class="count flex h-7 w-8 items-center justify-center rounded-lg bg-[var(--blue)] text-white"
+          >
+            3
+          </div>
+        </div>
+        <button
+          class="mark-read text-sm font-normal text-[var(--darkGrayishBlue)] hover:text-[var(--blue)]"
+          aria-pressed="false"
+        >
+          Mark all as read
+        </button>
+      </div>
+      <div class="notifications-tray flex flex-col gap-3">
+        <div
+          class="notification unread animate-right unread-border relative rounded-lg"
+        >
+          <div
+            class="new-notify absolute -top-[0.65rem] right-0 flex drop-shadow-[0px_0px_1px_#00000050]"
+          >
+            <img
+              class="-mr-[0.35rem]"
+              width="20"
+              height="20"
+              src="./assets/images/left-angle.svg"
+              aria-hidden="true"
+              alt=""
+            />
+
+            <div
+              class="w-fit rounded-r-md bg-[var(--red)] px-1 py-[0.15rem] text-[0.6rem] text-white"
+            >
+              NEW
+            </div>
+          </div>
+          <div
+            class="unread-shadow flex w-full gap-3 rounded-lg bg-[var(--veryLightGrayishBlue)] p-4 md:gap-4"
+          >
+            <img
+              class="status-on h-fit"
+              src="./assets/images/avatar-mark-webber.webp"
+              width="45"
+              height="45"
+              alt="Avatar Mark Zukerberg"
+            />
+            <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+              <p class="notify-content">
+                <strong>Mark Zukerberg</strong>
+                <span class="text-[var(--darkGrayishBlue)]"
+                  >reacted to your recent post
+                  <a href="#"
+                    ><strong class="hover:opacity-90"
+                      >My first tournament today!
+                    </strong></a
+                  >
+                </span>
+              </p>
+              <p class="tclamp4 pt-1 text-[var(--grayishBlue)]">1m ago</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="notification unread animate-right unread-border relative rounded-lg"
+        >
+          <div
+            class="new-notify absolute -top-[0.65rem] right-0 flex drop-shadow-[0px_0px_1px_#00000050]"
+          >
+            <img
+              class="-mr-[0.35rem]"
+              width="20"
+              height="20"
+              src="./assets/images/left-angle.svg"
+              aria-hidden="true"
+              alt=""
+            />
+
+            <div
+              class="w-fit rounded-r-md bg-[var(--red)] px-1 py-[0.15rem] text-[0.6rem] text-white"
+            >
+              NEW
+            </div>
+          </div>
+          <div
+            class="unread-shadow flex w-full gap-3 rounded-lg bg-[var(--veryLightGrayishBlue)] p-4 md:gap-4"
+          >
+            <img
+              class="h-fit"
+              src="./assets/images/avatar-angela-gray.webp"
+              width="45"
+              height="45"
+              alt="Avatar Scarlet Witch"
+            />
+            <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+              <p class="notify-content">
+                <strong>Scarlet Witch</strong>
+                <span class="text-[var(--darkGrayishBlue)]">followed you </span>
+              </p>
+              <p class="tclamp4 pt-1 text-[var(--grayishBlue)]">5m ago</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="notification unread animate-right unread-border relative rounded-lg"
+        >
+          <div
+            class="new-notify absolute -top-[0.65rem] right-0 flex drop-shadow-[0px_0px_1px_#00000050]"
+          >
+            <img
+              class="-mr-[0.35rem]"
+              width="20"
+              height="20"
+              src="./assets/images/left-angle.svg"
+              aria-hidden="true"
+              alt=""
+            />
+
+            <div
+              class="w-fit rounded-r-md bg-[var(--red)] px-1 py-[0.15rem] text-[0.6rem] text-white"
+            >
+              NEW
+            </div>
+          </div>
+          <div
+            class="unread-shadow flex w-full gap-3 rounded-lg bg-[var(--veryLightGrayishBlue)] p-4 md:gap-4"
+          >
+            <img
+              class="h-fit"
+              src="./assets/images/avatar-jacob-thompson.webp"
+              width="45"
+              height="45"
+              alt="Avatar Chris Evans"
+            />
+            <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+              <p class="notify-content">
+                <strong>Chris Evans</strong>
+                <span class="text-[var(--darkGrayishBlue)]"
+                  >has joined your group
+                  <a href="#"
+                    ><strong class="text-[var(--blue)] hover:opacity-90"
+                      >Chess Club</strong
+                    ></a
+                  >
+                </span>
+              </p>
+              <p class="tclamp4 pt-1 text-[var(--grayishBlue)]">1 day ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="notification relative rounded-lg">
+          <div
+            class="read-shadow flex w-full gap-3 rounded-lg bg-[var(--veryLightGrayishBlue)] p-4"
+          >
+            <img
+              class="status-on h-fit"
+              src="./assets/images/avatar-rizky-hasanuddin.webp"
+              width="45"
+              height="45"
+              alt="Avatar Johnny Depp"
+            />
+            <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+              <p class="notify-content">
+                <strong>Johnny Depp</strong>
+                <span class="text-[var(--darkGrayishBlue)]"
+                  >sent you a private message
+                </span>
+              </p>
+              <p class="tclamp4 pb-3 pt-1 text-[var(--grayishBlue)]">
+                5 days ago
+              </p>
+              <p
+                class="rounded-lg border bg-white p-4 text-[var(--darkGrayishBlue)]"
+              >
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="notification relative rounded-lg">
+          <div
+            class="read-shadow flex w-full justify-between rounded-lg bg-[var(--veryLightGrayishBlue)] p-4"
+          >
+            <div class="flex gap-3">
+              <img
+                class="h-fit"
+                src="./assets/images/avatar-kimberly-smith.webp"
+                width="45"
+                height="45"
+                alt="Avatar Gamora"
+              />
+              <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+                <p class="notify-content">
+                  <strong>Gamora</strong>
+                  <span class="text-[var(--darkGrayishBlue)]"
+                    >commented on your picture
+                  </span>
+                </p>
+                <p class="tclamp4 pb-3 pt-1 text-[var(--grayishBlue)]">
+                  1 week ago
+                </p>
+              </div>
+            </div>
+            <div class="comment-on-pic">
+              <img
+                width="45"
+                height="45"
+                src="./assets/images/image-chess.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="notification relative rounded-lg">
+          <div
+            class="read-shadow flex w-full gap-3 rounded-lg bg-[var(--veryLightGrayishBlue)] p-4"
+          >
+            <img
+              class="h-fit"
+              src="./assets/images/avatar-nathan-peterson.webp"
+              width="45"
+              height="45"
+              alt="Avatar Chadwick Bose"
+            />
+            <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+              <p class="notify-content">
+                <strong>Chadwick Bose</strong>
+                <span class="text-[var(--darkGrayishBlue)]"
+                  >reacted to your recent post
+                  <a href="#"
+                    ><strong class="hover:opacity-90"
+                      >5 end-game strategies to increase your win rate
+                    </strong>
+                  </a>
+                </span>
+              </p>
+              <p class="tclamp4 pb-3 pt-1 text-[var(--grayishBlue)]">
+                2 weeks ago
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="notification relative rounded-lg">
+          <div
+            class="read-shadow flex w-full gap-3 rounded-lg bg-[var(--veryLightGrayishBlue)] p-4"
+          >
+            <img
+              class="h-fit"
+              src="./assets/images/avatar-anna-kim.webp"
+              width="45"
+              height="45"
+              alt="Avatar Natasha"
+            />
+            <div class="tclamp3 relative leading-[1.15rem] tracking-wide">
+              <p class="notify-content">
+                <strong>Natasha</strong>
+                <span class="text-[var(--darkGrayishBlue)]"
+                  >left the group
+                  <a href="#"
+                    ><strong class="text-[var(--blue)] hover:opacity-90"
+                      >Chess Club</strong
+                    ></a
+                  >
+                </span>
+              </p>
+              <p class="tclamp4 pt-1 text-[var(--grayishBlue)]">2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

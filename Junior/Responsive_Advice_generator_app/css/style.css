@@ -1,0 +1,258 @@
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+
+  /* font-sizes */
+  --fs-large: 1.75rem;
+  --fs-medium: 0.87rem;
+
+  /* font-families */
+  --ff-rope: "Manrope", sans-serif;
+
+  /* font weights */
+  --fw-bolder: 800;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-rope);
+  list-style: none;
+  text-rendering: optimizeSpeed;
+  transition: all 0.7s linear;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+p,
+span {
+  display: inline;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  display: inline;
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------MAIN CODE----------------------------------------- */
+
+body {
+  min-height: 100vh;
+  background: var(--Dark-Blue);
+}
+.container {
+  max-width: 33.75rem;
+  background: var(--Dark-Grayish-Blue);
+  border-radius: 0.94rem;
+  padding: 2.9375rem 3rem 4.5rem 3rem;
+  border: 1px solid transparent;
+  border-inline: none;
+}
+.advice-gen h2 {
+  color: var(--Neon-Green);
+  padding-bottom: 1.5rem;
+}
+.advice-gen q {
+  color: var(--Light-Cyan);
+}
+.advice-gen .divider {
+  gap: var(--gap, 1rem);
+  padding-top: 2.5rem;
+}
+.advice-gen .divider hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--Grayish-Blue);
+}
+.advice-gen .image {
+  padding: 1.25rem;
+  animation: spin 3s linear 2s infinite;
+}
+.advice-gen .advice-gen__output {
+  animation: opacity 2s;
+}
+.advice-gen__btn {
+  width: 4rem;
+  background: var(--Neon-Green);
+  border: none;
+  border-radius: 50%;
+  transform: translate(0, 2.5rem);
+  margin-bottom: -4rem;
+}
+.advice-gen .advice-gen__btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 30px 0px var(--Neon-Green);
+}
+.container:hover {
+  border: 1px solid var(--Neon-Green);
+  border-inline: none;
+  transform: translate(0, -10px);
+  transition: transform 0.3s linear;
+}
+
+/* animations */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* mobile-version */
+@media only screen and (max-width: 700px) {
+  :root {
+    /* font-sizes */
+    --fs-large: 1.32rem;
+    --fs-medium: 0.75rem;
+  }
+  body {
+    padding: 0.6rem;
+  }
+  .container {
+    padding: 2.4375rem 1.23rem 4.155rem 1.23rem;
+  }
+  .trex {
+    display: none;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* flex */
+.flex-row {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-c {
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-jsb {
+  align-content: center;
+  justify-content: space-between;
+}
+.flex-jsa {
+  align-content: center;
+  justify-content: space-between;
+}
+
+/* grid */
+.grid {
+  display: grid;
+}
+.grid-c {
+  place-items: center;
+}
+/* block */
+.block {
+  display: block;
+}
+
+/* typography */
+
+.letter-spacing-1 {
+  letter-spacing: 0.25em;
+}
+.line-height-1 {
+  line-height: 1.1875rem;
+}
+
+.letter-spacing-2 {
+  letter-spacing: -0.02rem;
+}
+.line-height-2 {
+  line-height: 38px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.center {
+  margin: auto;
+}
+.t-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

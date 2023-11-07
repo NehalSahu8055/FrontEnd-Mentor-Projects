@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* colors */
+  --bgTheme: hsl(192, 3%, 39%);
+  --gray: hsl(0, 0%, 50%);
+  --menuShadow: hsla(0, 0%, 0%, 0.431);
+  
+
+  /* font-families */
+  --ff-spartan: "League Spartan", sans-serif;
+}
+
+* {
+  animation: opacity 0.4s ease-in-out;
+
+}
+
+[aria-expanded=true]+.logo__wrapper{
+  display: none;
+}
+
+
+/* Active nav */
+nav.active {
+  box-shadow: 0px 0px 0px 100vh var(--menuShadow);
+  animation: 0.4s opacity ease;
+}
+
+/* Navbar-fixed on top */
+
+
+.nav-active {
+  max-width: 90rem;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  justify-content: space-between;
+  background-color: var(--bgTheme);
+  box-shadow: 5px -1px 12px -5px var(--gray);
+  animation: 0.4s top-bottom ease;
+}
+
+
+
+/* Custom Classes */
+
+.ff-spartan {
+  font-family: var(--ff-spartan);
+}
+
+/* animations */
+
+@keyframes top-bottom {
+  from {
+    transform: translate(0, -6.25rem);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

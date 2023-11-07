@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Advice generator app" />
+    <meta
+      name="keywords"
+      content="Frontend Mentor,Advice generator app,_nehal, Responsive Designs"
+    />
+
+    <!-- icon linking -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Linking Script File -->
+    <script defer src="js/script.js"></script>
+
+    <title>Advice generator app</title>
+  </head>
+  <body class="flex-row flex-c t-center">
+    <main>
+      <div class="container advice-gen center">
+        <h1 class="sr-only">Advice Generator</h1>
+        <div class="advice-gen__output">
+          <h2
+            class="advice-gen__number fs-medium uppercase letter-spacing-1"
+            title="Advice"
+          >
+            Advice #..
+          </h2>
+          <q
+            class="advice-gen__quote fs-large letter-spacing-2 line-height-2"
+            title="Quote"
+            >...</q
+          >
+        </div>
+        <div class="divider flex-row flex-c">
+          <hr />
+          <img class="divider__img" src="images/divider.svg" alt="" />
+          <hr />
+        </div>
+        <div class="flex-row flex-c t-center" title="button">
+          <button class="advice-gen__btn">
+            <img class="image" src="images/icon-dice.svg" alt="" />
+            <span class=".sr-only">Load advice</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

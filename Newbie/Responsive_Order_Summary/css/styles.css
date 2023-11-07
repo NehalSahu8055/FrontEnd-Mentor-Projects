@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    color:hsl(224, 23%, 55%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background-repeat: no-repeat no-repeat;
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-size:100% 50%;
+    background-color:#E1E9Ff;
+  }
+.container{
+
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 16px;
+    max-width: 450px;
+    /* max-width: 10?00;; */
+    width:100%;
+    box-shadow:   0px 18px 13px 6px #CCD4F9;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.head-img{
+    max-width: 450px;
+    width:100%;
+    border-radius: 16px 16px 0 0;
+}
+.row2{
+    text-align: center;
+    /* width: 450px;
+    height: 195px; */
+    display: flex;
+    flex-direction: column;
+   
+}
+.row2 h1{
+    padding-top : 48px;
+    color :hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+.row2 p{
+    font-size:16px;
+    padding:23px 66px 21px;
+    /* font-weight: 500; */
+}
+.pay{
+
+    padding:24px;
+    display:flex;
+    border-radius:16px;
+    width:100%;
+    
+    border:none;
+    background-color:#eef2fb;
+    border-radius:7px;
+}
+.pay-heading{
+    color:hsl(223, 47%, 23%);
+    
+}
+
+li{
+    list-style: none;
+}
+
+.payment{
+    width:100%;
+    padding: 0 49px;
+}
+.pay>img{
+    margin-right:17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50px;
+    width:100%;
+}
+.change{
+    margin:auto 0;
+    text-align: right;
+    width:50%;
+}
+button:hover, .cancelorder:hover, .change:hover{
+    cursor:pointer;
+}
+h2{
+font-size: 19px;
+}
+
+a{
+    color:blue;
+    text-align: center;
+    /* margin-left:80px; */
+}
+button{
+
+    color:white;
+    max-width: 354px;
+    padding:14px 98px;
+    border-style: none;
+    background-color: hsl(245, 75%, 52%);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    margin:32px 0;
+    box-shadow:   0px 18px 13px 6px #DEDBF6;
+}
+button:hover{
+    background-color: #766CF1;
+}
+a:hover{
+    color:#766CF1;
+    text-decoration: none;
+}
+
+span{
+    font-size:16px;
+    font-weight: 700;
+    
+}
+span:hover{
+    color:hsl(223, 47%, 23%);
+}
+.cancelorder{
+    padding-bottom:48px;
+}
+

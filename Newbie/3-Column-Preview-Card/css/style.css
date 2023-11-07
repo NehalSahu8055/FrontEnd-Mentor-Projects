@@ -1,0 +1,113 @@
+*{
+    
+    font-family: 'Lexend Deca', sans-serif;   
+    color:hsla(0, 0%, 100%, 0.75);
+   
+}
+
+body {
+    display:flex; 
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color:hsl(0, 0%, 95%);
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 920px;
+    height: 500px;
+  }
+  .card1, .card2 , .card3{
+    text-align: left;
+    width: 307px;
+    height: 500px;
+  }
+  .card1{
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 7px 0 0 7px;
+  }
+  .card2, .btn2{
+    background-color: hsl(184, 100%, 22%);
+  }
+  .card3, .btn3{
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 7px 7px 0;
+  }
+  .card1>.items, .card2>.items, .card3>.items{
+    display: flex;
+    flex-direction: column;
+  }
+  .card1 img, .card2 img, .card3 img {
+    width: 72px;
+    height: 44px;
+    margin-bottom:13px;
+  }
+  h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+  }
+  .card1>.items, .card2>.items, .card3>.items{
+    margin:44px 48px 48px 44px;
+  }
+  p{
+    line-height:1.8;
+    margin-bottom:66px;
+    font-size: 15px;
+  }
+  .btn1, .btn2, .btn3{
+    background-color:  hsl(0, 0%, 95%);
+    width: 146px;
+    height: 48px;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 95%);
+  }
+.btn1{
+    color: hsl(31, 77%, 52%);
+
+}
+.btn2{
+    color: hsl(184, 100%, 22%);
+}
+.btn3{
+    color: hsl(179, 100%, 13%);
+}
+
+.btn1:hover{
+    color:hsl(0, 0%, 95%);
+    background-color: hsl(31, 77%, 52%);
+  }
+.btn2:hover{
+    color:hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+  }
+.btn3:hover{
+    color:hsl(0, 0%, 95%);
+    background-color: hsl(184, 100%, 22%);
+  }
+
+  @media only screen and (max-width:700px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 327px;;
+        height: 1326px;;
+    }
+    .card1{
+        border-radius:7px 7px 0 0;
+      }
+    .card3{
+       border-radius:0 0 7px 7px;
+    }
+    .card1 , .card2 , .card3{
+        width:  327px;
+        height: 442px;
+    }
+    p{
+        margin-bottom:13px;
+    }
+  }

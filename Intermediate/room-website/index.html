@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Room Homepage" />
+  <meta name="keywords" content="Frontend Mentor, Room Homepage, _nehal, Responsive Designs" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" as="style"
+  onload="this.onload=null; this.rel='stylesheet'">
+  <noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" type="text/css">
+  </noscript>
+
+  <!-- Linking CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.min.css">
+
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CDN Linking -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- JS Linking -->
+  <script defer src="js/script.min.js"></script>
+
+
+  <title>Room | Homepage</title>
+</head>
+
+<body class="ff-spartan min-h-screen max-w-[90rem] mx-auto scroll-r">
+  <!-- 
+        #HEADER SECTION 
+  -->
+
+  <header class="navbar fixed w-full py-6 z-50 lg:max-w-lg ">
+
+
+    <!-- Navbar -->
+    <nav id="main-navigation"
+      class="text-black flex justify-between items-center flex-wrap px-10 transition-none">
+
+      <button class="hamburger lg:hidden" aria-label="navigation toggle" aria-expanded="false"
+        aria-controls="menu-list">
+        <i class="fa-solid text-xl fa-bars text-white" aria-hidden="true"></i>
+      </button>
+
+
+      <div class="logo__wrapper">
+        <a href="/">
+          <span class="text-white text-3xl">room</span>
+        </a>
+      </div>
+
+      <ul  id="menu-list"
+        class="text-white text-[1rem] ham__dropdown flex gap-10 max-lg:hidden max-lg:gap-3 max-lg:items-center max-lg:py-3">
+        <li class="cursor-pointer flex hover:opacity-80 hover:scale-105 after:absolute after:translate-y-6 after:bg-white hover:after:w-5 hover:after:h-[0.15rem] transition duration-200 ease-in-out">
+          <a href="https://nehalsahu8055.github.io/Responsive_Four_Card_Feature_Section/">home</a>
+        </li>
+        <li class="cursor-pointer flex hover:opacity-80 hover:scale-105 after:absolute after:translate-y-6 after:bg-white hover:after:w-5 hover:after:h-[0.15rem] transition duration-200 ease-in-out ">
+          <a href="https://coding-bootcamp-slider-nehal.netlify.app/">shop</a>
+        </li>
+        <li class="cursor-pointer flex hover:opacity-80 hover:scale-105 after:absolute after:translate-y-6 after:bg-white hover:after:w-5 hover:after:h-[0.15rem] transition duration-200 ease-in-out">
+          <a href="https://nehalsahu8055.github.io/Responsive_Single_Price_Grid/">about</a>
+        </li>
+        <li class="cursor-pointer flex hover:opacity-80 hover:scale-105 after:absolute after:translate-y-6 after:bg-white hover:after:w-5 hover:after:h-[0.15rem] transition duration-200 ease-in-out">
+          <a href="https://nehalsahu8055.github.io/Responsive_Pricing_Component_With_toggle_button/">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+        #MAIN SECTION 
+   -->
+
+  <main>
+
+
+    <!-- CAROUSEL SECTION -->
+    <section id="carousel" class="carousel lg:flex">
+
+
+
+      <div class="relative lg:flex">
+
+      <!-- Pictures -->
+        <figure>
+          <!-- picture - 1 -->
+
+            <img class="pic-1 w-screen h-full" src="images/desktop-image-hero-1.jpg" aria-label="First Slide"
+             alt="Some white chairs with a table in between having a small plant pot above it.">
+         
+          <!-- picture - 2 -->
+          
+            <img class="pic-2 w-screen h-full hidden" src="images/desktop-image-hero-2.jpg" aria-label="Second Slide"
+              alt="Some colourful stylish chairs">
+          
+
+          <!-- picture - 3 -->
+          
+            <img class="pic-3 w-screen h-full hidden" src="images/desktop-image-hero-3.jpg" aria-label="Third Slide"
+              alt="An elegant black vintage chair">
+          
+        </figure>
+
+      <!-- Main Content with heading and description along with shop button -->
+      <!-- Main Content - 1 -->
+      <div class="main__content-shop main__content-shop-1 flex flex-col px-6 py-14 lg:max-w-[40%]  lg:px-24 lg:py-[7rem]">
+
+        <h1 class="text-4xl font-extrabold pb-3 lg:font-semibold lg:text-[2.79rem] lg:pb-7 ">Discover innovative ways to
+          decorate</h1>
+        <p class="text-[0.95rem] text-[#716f6f] lg:text-[0.99rem] pb-9">
+          We provide
+          unmatched quality, comfort, and style for property owners across the country.
+          Our experts combine form and function in bringing your vision to life. Create a
+          room in your own style with our collection and make your property a reflection
+          of you and what you love.
+        </p>
+        <a href="#" class="uppercase flex items-center gap5 hover:opacity-80">
+          <span class="tracking-[0.75rem] -mb-1">shop now</span>
+          <img src="images/icon-arrow.svg" alt="">
+        </a>
+      </div>
+
+      <!-- Main Content - 2 -->
+      <div class="main__content-shop main__content-shop-2 px-6 py-14 lg:max-w-[40%] lg:px-24 lg:py-[7rem] hidden">
+
+        <h1 class="text-4xl font-extrabold pb-3 lg:font-bold lg:text-[2.79rem] lg:pb-7 ">We are available all across the
+          globe</h1>
+        <p class="text-[0.95rem] text-[#716f6f] lg:text-[0.99rem] pb-9">
+          With stores all over the world, it's easy for you to find furniture
+          for your home or place of business. Locally, we’re in most major
+          cities throughout the country. Find the branch nearest you using our
+          store locator. Any questions? Don't hesitate to contact us today.
+        </p>
+        <a href="#" class="uppercase flex items-center gap5">
+          <span class="tracking-[0.75rem] -mb-1">shop now</span>
+          <img src="images/icon-arrow.svg" alt="">
+        </a>
+      </div>
+
+      <!-- Main Content - 3 -->
+      <div class="main__content-shop main__content-shop-3 px-6 py-14 lg:max-w-[40%] lg:px-24 lg:py-[7rem] hidden">
+
+        <h1 class="text-4xl font-extrabold pb-3 lg:font-bold lg:text-[2.79rem] lg:pb-7 ">Manufactured with the best
+          materials</h1>
+        <p class="text-[0.95rem] text-[#716f6f] lg:text-[0.99rem] pb-9">
+          Our modern furniture store provide a high level of quality.
+          Our company has invested in advanced technology to ensure that every
+          product is made as perfect and as consistent as possible. With three
+          decades of experience in this industry, we understand what customers
+          want for their home and office.
+        </p>
+        <a href="#" class="uppercase flex items-center gap5">
+          <span class="tracking-[0.75rem] -mb-1">shop now</span>
+          <img src="images/icon-arrow.svg" alt="">
+        </a>
+      </div>
+
+      <!-- Slider -->
+      <div class="flex slider absolute bottom-0 bg-black right-0" aria-label="Slider"
+          aria-labelledby="l-btn r-btn" role="group" aria-roledescription="carousel">
+          <a href="#" id="l-btn" class="p-5 cursor-pointer hover:bg-[#454545] lg:p-8" aria-label="slider button left"
+            role="button">
+            <span class="sr-only">Previous</span>
+            <img src="images/icon-angle-left.svg" class="aspect-[0.6] lg:aspect-auto" alt="" aria-hidden="true">
+          </a>
+          <a href="#" id="r-btn" class="p-5 cursor-pointer hover:bg-[#454545] lg:p-8" aria-label="slider button right"
+            role="button">
+            <span class="sr-only">Next</span>
+            <img src="images/icon-angle-right.svg" class="aspect-[0.6] lg:aspect-auto" alt="" aria-hidden="true">
+          </a>
+      </div>
+
+      </div>
+
+
+
+     
+
+
+
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="main__content-furniture about lg:flex">
+
+
+      <figure class="content__img">
+        <img class="w-screen h-full" src="images/image-about-dark.jpg"
+          alt="Some comfy chairs with a rounded table in between.">
+      </figure>
+
+      <div class="text-content px-6 py-12 lg:max-w-[40%] lg:px-12 lg:py-16">
+        <h2 class="uppercase text-[1rem] font-bold tracking-[0.4rem] pb-4 lg:text-[1.2rem]">About our furniture</h2>
+        <p class="text-[0.95rem] text-[#716f6f]">
+
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that best
+          express your interests and what inspires you. Find the furniture pieces you
+          need, from traditional to contemporary styles or anything in between. Product
+          specialists are available to help you create your dream space.
+        </p>
+      </div>
+
+
+      <figure class="content__img">
+        <img class="w-screen h-full" src="images/image-about-light.jpg"
+          alt="An elegant white chair with white wall background.">
+      </figure>
+
+    </section>
+
+
+
+  </main>
+
+  
+
+
+
+</body>
+
+</html>
+
+</html>

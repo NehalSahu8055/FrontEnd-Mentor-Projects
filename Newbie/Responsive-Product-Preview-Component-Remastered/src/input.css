@@ -1,0 +1,70 @@
+:root {
+  /* Colors */
+  --darkBrown: hsla(0, 91%, 9%, 0.888);
+  --lightBrown: #403330fb;
+  --veryLightBrown: hsl(0, 18%, 36%);
+  --white: #dddad3;
+  --loadLine: hsl(0, 4%, 50%);
+  --gradient: -webkit-linear-gradient(
+    var(--lightBrown),
+    var(--veryLightBrown),
+    var(--darkBrown)
+  );
+
+  /* clamps */
+  --tclamp1: clamp(1.5rem, 1.393rem + 0.536vw, 1.875rem);
+  --tclamp2: clamp(0.9rem, 0.871rem + 0.143vw, 1rem);
+  --pclamp: clamp(1.2rem, 4vw, 2rem);
+
+  /* shadows */
+  --shadowColor: rgba(140 129 127 / 0.773);
+  --shadow:-1px 0px 1rem 3px var(--shadowColor);
+
+  /* urls */
+  --address: url("/assets/images/bg.avif");
+
+  /* font-families */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-fraunces: "Fraunces", sans-serif;
+}
+
+/*----------- Main styling ------------ */
+body {
+  background: var(--address);
+  -webkit-tap-highlight-color: transparent;
+}
+main {
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Custom classes */
+
+/*----- Fonts -----*/
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.font-fraunces {
+  font-family: var(--font-fraunces);
+}
+
+/*----- Clamps ------ */
+/* text-clamp-1 already  predefined in tailwind */
+
+.text-clamp-2 {
+  font-size: var(--tclamp1);
+  line-height: 2.25rem;
+}
+.text-clamp-3 {
+  font-size: var(--tclamp2);
+}
+.p-clamp {
+  padding: var(--pclamp);
+}

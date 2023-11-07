@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- displays site properly based on user's device -->
+    <meta name="description" content="Interactive rating component" />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Interactive rating component, _nehal, Responsive Designs"
+    />
+
+    <!-- icon linking -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Linking Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Interactive rating component</title>
+  </head> 
+  <body class="flex-row flex-c">
+    <main>
+      <div class="container flex-col center rate-card">
+        <div class="head flex-col">
+          <div class="flex-row flex-c star-bg">
+            <img class="icon-star" src="images/icon-star.svg" alt="icon-star" />
+          </div>
+          <h1 class="heading fs-large">How did we do?</h1>
+        </div>
+        <div class="about flex-col">
+          <div class="description fs-small">
+            <p>
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+          </div>
+          <div class="flex-row flex-jsb flex-wrap rate-box">
+            <button
+              type="button"
+              aria-label="rating-1-button"
+              class="flex-row flex-c star-bg r-star"
+            >
+              <span class="block rbtn-dig">1</span>
+            </button>
+            <button
+              type="button"
+              aria-label="rating-2-button"
+              class="flex-row flex-c star-bg r-star"
+            >
+              <span class="block rbtn-dig">2</span>
+            </button>
+            <button
+              type="button"
+              aria-label="rating-3-button"
+              class="flex-row flex-c star-bg r-star"
+            >
+              <span class="block rbtn-dig">3</span>
+            </button>
+            <button
+              type="button"
+              aria-label="rating-4-button"
+              class="flex-row flex-c star-bg r-star"
+            >
+              <span class="block rbtn-dig">4</span>
+            </button>
+            <button
+              type="button"
+              aria-label="rating-5-button"
+              class="flex-row flex-c star-bg r-star">
+              <span class="block rbtn-dig">5</span>
+            </button>
+          </div>
+          <div class="form t-center">
+            
+                  <button type="submit" aria-label="submit-button" class="btn">
+                    <span class="block uppercase letter-spacing-1">
+                      Submit
+                    </span>
+                  </button>
+              
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Thank you Card -->
+
+      <div class="container thnk-u flex-col center hidden">
+        <header class="head flex-col">
+          <div class="flex-row flex-c mobile-bg">
+            <img
+              class="icon-mobile"
+              src="images/illustration-thank-you.svg"
+              alt="icon-mobile"
+            />
+          </div>
+          <div class="rating-selected flex-row flex-c center fs-small">
+            <p class="flex-row flex-c add">You selected -- out of 5</p>
+          </div>
+          <h1 class="heading flex-row flex-c">Thank you!</h1>
+        </header>
+        <div class="about flex-col flex-c t-center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
