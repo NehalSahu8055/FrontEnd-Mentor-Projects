@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="./stylesheets/reset.css" />
+    <link rel="stylesheet" href="./stylesheets/main.css" />
+    <link rel="stylesheet" href="./stylesheets/mediaqueries.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./scripts/main.js"></script>
+
+    <title>Project tracking Intro Component</title>
+  </head>
+  <body>
+    <header>
+      <div class="back-illustration" aria-hidden="true"></div>
+      <nav>
+        <a href="/">
+          <img src="/logo.svg" alt="" width="25" />
+        </a>
+        <button
+          class="nav-hamburger"
+          aria-labelledby="hamburger"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <img
+            class="ham-icon"
+            src="/icon-hamburger.svg"
+            alt="Home | Project tracking Intro Component"
+          />
+          <span id="hamburger" class="sr-only"> Toggle Hamburger Menu </span>
+        </button>
+
+        <ul id="menu" class="menu">
+          <li class="menu-items"><a href="#">product</a></li>
+          <li class="menu-items"><a href="#">features</a></li>
+          <li class="menu-items"><a href="#">pricing</a></li>
+          <li class="menu-items"><hr class="divider" /></li>
+          <li class="menu-items__cta"><a href="#">login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="hero">
+      <h1 class="sr-only">Project tracking Component</h1>
+      <div class="hero-image">
+        <img
+          src="/illustration-devices.svg"
+          alt="Illustration of mobile and laptop"
+          width="960"
+        />
+      </div>
+      <div class="hero-description">
+        <div class="highlights">
+          <span>New</span>
+          <p>Monograph Dashboard</p>
+        </div>
+        <div class="about">
+          <h2>Powerful insights into your team</h2>
+          <p>Project planning and time tracking for agile teams</p>
+        </div>
+
+        <div class="cta">
+          <button class="schedule">Schedule a demo</button>
+          <button class="preview">To see a preview</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
