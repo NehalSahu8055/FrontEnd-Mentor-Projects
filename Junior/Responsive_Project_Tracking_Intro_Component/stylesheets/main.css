@@ -1,6 +1,6 @@
 :root {
   /* colors */
-  --Red: hsl(0, 100%, 68%);
+  --Red: hsl(0, 47%, 51%);
   --Very_Dark_Blue: hsl(230, 29%, 20%);
   --Dark_Grayish_Blue: hsl(230, 11%, 40%);
   --Grayish_Blue: hsl(240, 4%, 44%);
@@ -209,5 +209,4 @@ nav {
 /* Custom Cursor */
 body {
   cursor: url("/cursor.png"), auto;
-
 }
