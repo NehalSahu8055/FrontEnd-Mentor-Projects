@@ -5,16 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
 
+    <!--
+To Change 
+live-url  
+-->
+
+    <!-- Basic META Tags -->
+    <meta name="description" content="---" />
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Project tracking Intro Component , nehal, Responsive Designs"
+    />
+    <meta name="author" content="nehal" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Project tracking Intro Component"
+    />
+
+    <!-- Open Graph META Tags for social sharing -->
+    <meta
+      property="og:title"
+      content="Project tracking Intro Component | nehal"
+    />
+    <meta property="og:description" content="---" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/cjepxjhbnxwy4vccppg3.jpg"
+    />
+    <meta property="og:url" content="live-url" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card META Tags for Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="nehal" />
+    <meta
+      name="twitter:title"
+      content="Project tracking Intro Component | nehal"
+    />
+    <meta name="twitter:description" content="---" />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/cjepxjhbnxwy4vccppg3.jpg"
+    />
     <!-- StyleSheets -->
     <link rel="stylesheet" href="./stylesheets/reset.css" />
     <link rel="stylesheet" href="./stylesheets/main.css" />
     <link rel="stylesheet" href="./stylesheets/mediaqueries.css" />
+    <link rel="stylesheet" href="./stylesheets/custom_scrollbar.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+    />
+    <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
 
     <script defer src="./scripts/main.js"></script>
@@ -22,11 +80,22 @@
     <title>Project tracking Intro Component</title>
   </head>
   <body>
+    <noscript>
+      <p>
+        Your browser does not support JavaScript or it is disabled.<br />Please
+        enable JavaScript to use this website to its full extent.<br />Click
+        here to know more
+        <a
+          href="https://www.impressivewebs.com/how-to-disable-javascript-in-almost-any-browser/"
+          >link</a
+        >
+      </p>
+    </noscript>
     <header>
-      <div class="back-illustration" aria-hidden="true"></div>
+      <div class="back-decoration" aria-hidden="true"></div>
       <nav>
-        <a href="/">
-          <img src="/logo.svg" alt="" width="25" />
+        <a href="/" aria-label="Home | Project tracking Intro Component">
+          <img class="logo" src="/logo.svg" alt="" width="25" />
         </a>
         <button
           class="nav-hamburger"
@@ -35,20 +104,26 @@
           aria-controls="menu"
           aria-expanded="false"
         >
-          <img
-            class="ham-icon"
-            src="/icon-hamburger.svg"
-            alt="Home | Project tracking Intro Component"
-          />
+          <img class="ham-icon" src="/icon-hamburger.svg" alt="" />
           <span id="hamburger" class="sr-only"> Toggle Hamburger Menu </span>
         </button>
 
-        <ul id="menu" class="menu">
-          <li class="menu-items"><a href="#">product</a></li>
-          <li class="menu-items"><a href="#">features</a></li>
-          <li class="menu-items"><a href="#">pricing</a></li>
-          <li class="menu-items"><hr class="divider" /></li>
-          <li class="menu-items__cta"><a href="#">login</a></li>
+        <ul role="menu" id="menu" class="menu" aria-label="Menu">
+          <li role="menuitem" class="menu-item" aria-label="product link">
+            <a href="#">product</a>
+          </li>
+          <li role="menuitem" class="menu-item" aria-label="features link">
+            <a href="#">features</a>
+          </li>
+          <li role="menuitem" class="menu-item" aria-label="pricing link">
+            <a href="#">pricing</a>
+          </li>
+          <li role="menuitem" class="menu-item" aria-hidden="true">
+            <hr class="divider" />
+          </li>
+          <li role="menuitem" class="menu-item__cta" aria-label="login link">
+            <a href="#">login</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -58,7 +133,6 @@
         <img
           src="/illustration-devices.svg"
           alt="Illustration of mobile and laptop"
-          width="960"
         />
       </div>
       <div class="hero-description">

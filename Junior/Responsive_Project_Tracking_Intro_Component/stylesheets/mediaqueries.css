@@ -1,0 +1,95 @@
+/* Desktop Layout */
+
+@media (min-width: 51.5625rem) {
+  .logo {
+    width: 2rem;
+  }
+
+  main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-hamburger[aria-expanded="false"] + .menu {
+    display: flex;
+  }
+  .nav-hamburger {
+    display: none;
+  }
+  .menu {
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    width: fit-content;
+    font-size: 0.9rem;
+    gap: 2.5rem;
+    padding: 0;
+  }
+  .menu-item__cta::before {
+    position: absolute;
+    content: "";
+    width: 0.35rem;
+    height: 0.35rem;
+    translate: 0.6rem;
+    background-color: var(--menu-shadow);
+    border-radius: 50%;
+    transform: translate(-3.25rem, 100%);
+  }
+  .menu-item__cta {
+    padding-left: 0.8rem;
+  }
+  .divider {
+    display: none;
+  }
+
+  .hero {
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+
+  .hero-description {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+  .hero-image {
+    width: 50%;
+    padding: 0;
+    transform: translateX(0%);
+    max-width: unset;
+
+    align-self: center;
+    object-fit: cover;
+  }
+
+  .hero-image img {
+    max-width: unset;
+  }
+
+  .about h2 {
+    line-height: 1em;
+    padding-bottom: 1rem;
+  }
+  .about p {
+    max-width: 18rem;
+    word-spacing: -0.1rem;
+    line-height: 1.6rem;
+    padding-bottom: 3rem;
+  }
+  .cta {
+    flex-wrap: nowrap;
+  }
+  .cta .schedule {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.2rem;
+  }
+  .cta .preview {
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+  }
+  .back-decoration {
+    width: 55%;
+    height: 25rem;
+  }
+}

@@ -3,17 +3,25 @@
   --Red: hsl(0, 100%, 68%);
   --Very_Dark_Blue: hsl(230, 29%, 20%);
   --Dark_Grayish_Blue: hsl(230, 11%, 40%);
-  --Grayish_Blue: hsl(231, 7%, 65%);
+  --Grayish_Blue: hsl(240, 4%, 44%);
   --Light_Grayish_Blue: hsl(207, 33%, 95%);
-
   --menu-shadow: #0000002b;
+
+  /* font families */
+  --ff-barlow: "Barlow", sans-serif;
+  --ff-barlow-condensed: "Barlow Condensed", sans-serif;
+
+  /* clamps */
+  --pclamp1: clamp(1.5rem, 0.444rem + 4.507vw, 4.5rem);
+  --pclamp2: clamp(0rem, -5rem + 13.333vw, 7rem);
+  --tclamp1: clamp(2.5rem, 1.972rem + 2.254vw, 4rem);
 }
 
 h1,
 h2,
 button,
 nav {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--ff-barlow-condensed);
 }
 
 h1,
@@ -24,6 +32,7 @@ button {
 
 button {
   cursor: pointer;
+  height: fit-content;
 }
 
 body {
@@ -31,20 +40,18 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  font-family: "Barlow", sans-serif;
+  font-family: var(--ff-barlow);
   padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 header,
 .hero-description {
-  padding-inline: 2rem;
+  padding-inline: var(--pclamp1);
 }
 main {
-  max-width: 90rem;
+  padding: var(--pclamp2) 0;
 }
 
 nav {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,11 +64,20 @@ nav {
 .hero-description {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+
+  display: grid;
+  gap: 1rem;
 }
+
 .hero-image {
   align-self: flex-end;
   width: 31rem;
   transform: translateX(25%);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.hero-image img {
+  max-width: 100%;
 }
 .highlights {
   display: flex;
@@ -79,6 +95,7 @@ nav {
   padding-inline: 0.45rem;
   font-weight: 700;
   letter-spacing: 0.1em;
+  height: fit-content;
 
   text-transform: uppercase;
 }
@@ -89,17 +106,10 @@ nav {
 }
 
 .about h2 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: var(--tclamp1);
   line-height: 2.5rem;
   color: var(--Very_Dark_Blue);
-}
-.hero-description {
-  display: grid;
-  gap: 1rem;
-}
-.hero-image {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .about {
@@ -115,19 +125,18 @@ nav {
 .cta {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.cta:hover {
-  opacity: 0.8;
-}
+
 .cta .schedule {
   color: white;
   background-color: var(--Red);
   border-radius: 0.3rem;
 
   font-weight: 700;
-  padding: 0.5rem;
+  padding: 0.5rem 1.7rem;
   letter-spacing: 0.01em;
-  padding-inline: 1.7rem;
 }
 .cta .preview {
   color: var(--Grayish_Blue);
@@ -135,12 +144,16 @@ nav {
   letter-spacing: 0.2em;
   word-spacing: -0.05em;
 }
-.back-illustration {
+.cta .schedule:hover,
+.cta .preview:hover {
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+.back-decoration {
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
-  /* transform: translateX(50%); */
   height: 27rem;
   z-index: -1;
   border-bottom-left-radius: 4rem;
@@ -153,7 +166,9 @@ nav {
 
 .menu {
   position: absolute;
-  top: 3.5rem;
+  top: 5rem;
+  right: var(--pclamp1);
+  left: var(--pclamp1);
 
   text-transform: uppercase;
   font-weight: 700;
@@ -163,7 +178,8 @@ nav {
   background-color: white;
   border-radius: 0.2rem;
   padding: 1.8rem;
-  width: 100%;
+
+  /* margin-inline: auto; */
 
   display: flex;
   flex-direction: column;
@@ -173,13 +189,25 @@ nav {
   box-shadow: 0px 0px 11px 2px var(--menu-shadow);
   z-index: 40;
 }
-.menu-items {
+.menu-item {
   text-align: center;
   width: 100%;
 }
-.menu-items__cta {
+.menu-item:hover,
+.menu-item__cta:hover {
+  color: var(--Red);
+  transition: 0.3s ease;
+}
+
+.menu-item__cta {
   color: var(--Grayish_Blue);
 }
 .divider {
   border: 1px solid var(--Light_Grayish_Blue);
+}
+
+/* Custom Cursor */
+body {
+  cursor: url("/cursor.png"), auto;
+
 }
