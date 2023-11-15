@@ -1,9 +1,9 @@
-# <img src="/favicon.svg" width="30"/> Project Tracking Intro Component
+# <img src="./public/favicon.svg" width="30"/> Project Tracking Intro Component
 
 ### 🔗 Links
 
-- Solution URL: [Click here]()
-- Live Site URL: [Click here]()
+- Solution URL: [Click here](https://github.com/NehalSahu8055/FrontEnd-Mentor-Projects/tree/master/Junior/Responsive_Project_Tracking_Intro_Component)
+- Live Site URL: [Click here](https://project-tracking-component-nehal.netlify.app/)
 
 ### 🛠️ Built with
 
