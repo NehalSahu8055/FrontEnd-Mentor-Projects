@@ -16,7 +16,6 @@
 - 💈 Custom Scrollbar
 - 🖱️ Custom Cursor
 - 🧏 Tested on windows OS with `NVDA & preinstalled screen reader`
-- ✔️ Tested with `linter` (eslint)
 - ⌨️ Accessible with keyboard
 
 📈 Scored 99% on Google Pagespeed Insights!
