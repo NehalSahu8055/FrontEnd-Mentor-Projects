@@ -1,4 +1,4 @@
-# <img src="public/favicon.svg" width="30"/> Project Tracking Intro Component
+# <img src="/favicon.svg" width="30"/> Project Tracking Intro Component
 
 ### 🔗 Links
 
@@ -17,8 +17,7 @@
 - 🖱️ Custom Cursor
 - 🧏 Tested on windows OS with `NVDA & preinstalled screen reader`
 - ⌨️ Accessible with keyboard
-
-📈 Scored 99% on Google Pagespeed Insights!
+  📈 Scored 99% on Google Pagespeed Insights!
 
 ## ✒️Author
 
