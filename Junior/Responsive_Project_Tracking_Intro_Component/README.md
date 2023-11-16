@@ -16,8 +16,9 @@
 - 💈 Custom Scrollbar
 - 🖱️ Custom Cursor
 - 🧏 Tested on windows OS with `NVDA & preinstalled screen reader`
+- 🍔 Accessible `Hamburger `
 - ⌨️ Accessible with keyboard
-  📈 Scored 99% on Google Pagespeed Insights!
+
 
 ## ✒️Author
 

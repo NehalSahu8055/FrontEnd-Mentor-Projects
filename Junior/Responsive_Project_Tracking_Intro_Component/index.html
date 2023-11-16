@@ -91,7 +91,7 @@
     </noscript>
     <header>
       <div class="back-decoration" aria-hidden="true"></div>
-      <nav>
+      <nav role="navigation" aria-label="Main menu">
         <a href="/" aria-label="Home | Project tracking Intro Component">
           <img class="logo" src="/logo.svg" alt="" width="25" />
         </a>
@@ -116,7 +116,12 @@
           <li role="menuitem" class="menu-item" aria-label="pricing link">
             <a href="#">pricing</a>
           </li>
-          <li role="menuitem" class="menu-item" aria-hidden="true">
+          <li
+            role="menuitem"
+            class="menu-item"
+            aria-hidden="true"
+            focusable="false"
+          >
             <hr class="divider" />
           </li>
           <li role="menuitem" class="menu-item__cta" aria-label="login link">
