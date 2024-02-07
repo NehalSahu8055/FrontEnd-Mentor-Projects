@@ -81,9 +81,8 @@ export default function Hamburger({ isSticky }) {
       </button>
 
       <div
-        className={`overlay-blur invisible absolute bottom-0 left-0 right-0 top-0  min-h-screen bg-[var(--overlay)] opacity-0 backdrop-blur-[2px] transition-opacity  duration-300 peer-aria-expanded:visible peer-aria-expanded:opacity-100 ${
-          isSticky && "top-2 md:top-6"
-        }`}
+        className={`overlay-blur invisible absolute bottom-0 left-0 right-0 top-0  min-h-screen bg-[var(--overlay)] opacity-0 backdrop-blur-[2px] transition-opacity  duration-300 peer-aria-expanded:visible peer-aria-expanded:opacity-100 ${isSticky && "top-2 md:top-6"
+          }`}
       ></div>
 
       {/* Menu */}

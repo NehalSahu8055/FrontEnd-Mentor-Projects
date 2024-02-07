@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`flex justify-between bg-white px-6 pb-5 pt-[2.3rem] transition md:px-[2.5rem] lg:items-center lg:justify-start lg:pt-[3rem] xl:px-[10.5rem]  ${
+      className={`laptop:items-center laptop:justify-start laptop:pt-[3rem] flex justify-between bg-white px-6 pb-5 pt-[2.3rem] transition md:px-[2.5rem] xl:px-[10.5rem]  ${
         isSticky && "shadow-lg"
       }`}
     >
