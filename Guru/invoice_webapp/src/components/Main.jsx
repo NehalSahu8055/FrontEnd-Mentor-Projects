@@ -5,7 +5,7 @@ import PreviewInvoice from "./invoices/PreviewInvoice";
 
 function Main() {
   return (
-    <main className="w-full">
+    <main className="min-h-screen w-full">
       <PreviewInvoice />
     </main>
   );
