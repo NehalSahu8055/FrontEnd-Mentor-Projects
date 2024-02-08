@@ -12,12 +12,12 @@ function Header() {
         elevation={6}
         component="aside"
         square="false"
-        className="dark:bg-d-card fixed left-0  top-0 flex w-full justify-between overflow-x-hidden rounded-br-2xl rounded-tr-2xl  tab:bottom-0 tab:h-screen tab:w-24 tab:flex-col"
+        className="fixed left-0 top-0  flex w-full justify-between overflow-x-hidden rounded-br-2xl rounded-tr-2xl tab:bottom-0  tab:h-screen tab:w-24 tab:flex-col dark:bg-d-card"
       >
         <Logo classes="grid place-content-center w-20 tab:w-24 tab:h-24 h-20" />
         <div className="flex tab:flex-col">
           <ThemeToggler />
-          <Divider className="bg-divider h-full w-[1px] tab:h-[1px] tab:w-full" />
+          <Divider className="h-full w-[1px] bg-divider tab:h-[1px] tab:w-full" />
           <UserAvatar />
         </div>
       </Paper>

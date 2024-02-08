@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MoonSvg from "/public/images/icon-moon.svg";
-import SunSvg from "/public/images/icon-sun.svg";
+import MoonSvg from "/images/icon-moon.svg";
+import SunSvg from "/images/icon-sun.svg";
 import { IconButton } from "@mui/material";
 
 function ThemeToggler() {
