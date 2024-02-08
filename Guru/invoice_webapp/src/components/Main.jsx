@@ -5,7 +5,7 @@ import PreviewInvoice from "./invoices/PreviewInvoice";
 
 function Main() {
   return (
-    <main className="mx-auto grid w-2/3">
+    <main className="w-full">
       <PreviewInvoice />
     </main>
   );

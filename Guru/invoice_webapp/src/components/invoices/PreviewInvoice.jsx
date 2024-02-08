@@ -5,17 +5,23 @@ import { ChevronRight, FiberManualRecord } from "@mui/icons-material";
 
 function PreviewInvoice() {
   return (
-    <>
+    <article className="mx-auto max-w-2xl">
+      <div className="mb-12 mt-14  text-white">
+        <h2 className="text-3.5xl font-bold "> Invoices</h2>
+        <span className="text-xs">
+          There are {mockDataInvoice.length} total invoices.
+        </span>
+      </div>
       {mockDataInvoice.map((invoice, index) => {
         const { id, paymentDue, clientName, status, total } = invoice;
+
         return (
           // <a href="/id">
           <Paper
             elevation={2}
-            component="article"
             square={false}
             key={index + "prevInvoice"}
-            className="mb-3 grid grid-cols-12 place-content-center rounded-md border border-transparent bg-card py-4 pl-6 pr-3 text-left text-xs text-white transition hover:border-logo dark:bg-d-card"
+            className="mb-3 grid grid-cols-12  place-content-center rounded-md border border-transparent bg-card py-4 pl-6 pr-3 text-left text-xs text-white transition hover:border-logo dark:bg-d-card"
           >
             <ul className="info col-span-7 grid grid-cols-8 place-content-center">
               <li className="col-span-2 font-bold">
@@ -47,10 +53,10 @@ function PreviewInvoice() {
         );
       })}
       <Pagination
-        className="mx-auto pb-8 pt-6 text-logo child:child:child:text-base child:child:child:text-logo "
+        className=" grid place-content-center pb-8 pt-6 text-logo child:child:child:text-base child:child:child:text-white  "
         count={10}
       />
-    </>
+    </article>
   );
 }
 

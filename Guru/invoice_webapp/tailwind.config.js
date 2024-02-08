@@ -38,6 +38,9 @@ export default {
         // "b-form": 1px solid #dfe3fa,
         // "shadow": 0px 10px 20px rgba(72, 84, 159, 0.25),
       },
+      fontSize: {
+        "3.5xl": "1.9rem",
+      },
       fontFamily: {
         spartan: ["Spartan", "sans-serif"],
       },
