@@ -33,6 +33,7 @@ export default {
         divider: "#494e6e",
         paid: "#33d69f",
         pending: "#ff8f00",
+        draft: "rgb(223, 227, 250)",
         hash: "rgb(126, 136, 195)",
         // "b-form": 1px solid #dfe3fa,
         // "shadow": 0px 10px 20px rgba(72, 84, 159, 0.25),

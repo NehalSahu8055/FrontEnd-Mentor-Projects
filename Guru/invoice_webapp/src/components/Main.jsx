@@ -1,6 +1,6 @@
 import React from "react";
 import mockDataInvoice from "../data/mockDataInvoice.js";
-import { Button, IconButton } from "@mui/material";
+import { Button, IconButton, Paper } from "@mui/material";
 import { ChevronRight, FiberManualRecord } from "@mui/icons-material";
 
 function Main() {
@@ -10,7 +10,10 @@ function Main() {
         const { id, paymentDue, clientName, status, total } = invoice;
         return (
           <a href="/id">
-            <article
+            <Paper
+              elevation={2}
+              component="article"
+              square="false"
               key={index + "prevInvoice"}
               className="dark:bg-d-card bg-card hover:border-logo mb-3 grid grid-cols-12 place-content-center rounded-md border border-transparent py-4 pl-6 pr-3 text-left text-xs text-white transition"
             >
@@ -26,7 +29,7 @@ function Main() {
                 <li className="col-span-2 my-auto">{"₹" + total}</li>
                 <li className="col-span-3">
                   <Button
-                    className={`font-spartan px-4 text-[0.75rem] font-bold capitalize tracking-tight hover:bg-transparent ${status == "paid" ? "bg-paid/10 text-paid" : "bg-pending/10 text-pending"}`}
+                    className={`font-spartan px-4 text-[0.75rem] font-bold capitalize tracking-tight hover:bg-transparent ${status == "paid" ? "bg-paid/10 text-paid" : status == "draft" ? "bg-draft/10 text-draft" : "bg-pending/10 text-pending"}`}
                     variant="contained"
                     startIcon={<FiberManualRecord className="h-3.5 w-3.5" />}
                     disableElevation
@@ -38,7 +41,7 @@ function Main() {
               <IconButton className=" ml-auto w-fit ">
                 <ChevronRight className="text-logo" />
               </IconButton>
-            </article>
+            </Paper>
           </a>
         );
       })}
