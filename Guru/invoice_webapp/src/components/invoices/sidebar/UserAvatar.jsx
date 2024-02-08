@@ -7,7 +7,7 @@ function UserAvatar() {
       <Avatar
         alt="User Avatar"
         src="/images/avatar.jpg"
-        className="mx-6 tab:mx-auto tab:my-5"
+        className="hover:ring-logo mx-6 ring-2 transition tab:mx-auto tab:my-5"
       />
     </button>
   );

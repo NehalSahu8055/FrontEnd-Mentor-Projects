@@ -31,10 +31,18 @@ export default {
         logo: "rgb(124, 93, 250)",
         "logo-psuedo": "rgb(146, 119, 255)",
         divider: "#494e6e",
+        paid: "#33d69f",
+        pending: "#ff8f00",
+        hash: "rgb(126, 136, 195)",
         // "b-form": 1px solid #dfe3fa,
         // "shadow": 0px 10px 20px rgba(72, 84, 159, 0.25),
       },
-      zIndex: {},
+      fontFamily: {
+        spartan: ["Spartan", "sans-serif"],
+      },
+      zIndex: {
+        header: "500",
+      },
       screens: {
         tab: "768px",
         laptop: "1024px",
