@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 import mockDataInvoice from "./../../data/mockDataInvoice";
-import {
-  Button,
-  FormControl,
-  FormLabel,
-  FormControlLabel,
-  IconButton,
-  Pagination,
-  Paper,
-  RadioGroup,
-  Radio,
-} from "@mui/material";
-import { ClickAwayListener } from "@mui/base/ClickAwayListener";
+import { Box, Button, IconButton, Pagination, Paper } from "@mui/material";
 import {
   AddCircle,
   ChevronRight,
@@ -20,57 +9,56 @@ import {
   KeyboardArrowUp,
 } from "@mui/icons-material";
 import FilterDropdown from "./FilterDropdown";
+import { Link } from "react-router-dom";
 
 function PreviewInvoice() {
   const [isFilterExpanded, setisFilterExpanded] = useState(false);
   const [filterInvoiceVal, setfilterInvoiceVal] = useState("all");
-  {
-    console.log(filterInvoiceVal);
-  }
   return (
-    <article className="mx-auto grid max-w-2xl">
-      <div className="mb-12 mt-14 flex justify-between  text-white">
+    <Box className="mx-auto grid max-w-2xl" component="section">
+      <h2 className="sr-only">Invoice HomePage</h2>
+
+      <div className="mb-12  flex justify-between  text-white">
         <div>
-          <h2 className="text-3.5xl font-bold "> Invoices</h2>
+          <h3 className="text-3.5xl font-bold "> Invoices</h3>
           <span className="text-xs">
             There are {mockDataInvoice.length} total invoices.
           </span>
         </div>
         <div className="flex  gap-14">
           <div className="relative self-center">
-            <ClickAwayListener
-              onClickAway={() => {
-                setisFilterExpanded(false);
+            <Button
+              onClick={() => {
+                setisFilterExpanded((prev) => !prev);
               }}
+              aria-expanded={isFilterExpanded}
+              aria-controls="filterInvoice"
+              aria-haspopup="true"
+              endIcon={
+                isFilterExpanded ? (
+                  <KeyboardArrowUp className="text-logo" />
+                ) : (
+                  <KeyboardArrowDown className="text-logo" />
+                )
+              }
+              className="my-auto flex h-fit font-spartan  text-xs font-bold capitalize tracking-tight text-white "
             >
-              <>
-                <Button
-                  onClick={() => {
-                    setisFilterExpanded((prev) => !prev);
-                  }}
-                  aria-expanded={isFilterExpanded}
-                  aria-controls="filterInvoice"
-                  aria-haspopup="true"
-                  endIcon={<KeyboardArrowDown className="text-logo" />}
-                  className="my-auto flex h-fit font-spartan  text-xs font-bold capitalize tracking-tight text-white "
-                >
-                  Filter by status
-                </Button>
-                <FilterDropdown
-                  isFilterExpanded={isFilterExpanded}
-                  setfilterInvoiceVal={setfilterInvoiceVal}
-                />
-              </>
-            </ClickAwayListener>
+              Filter by status
+            </Button>
+            {isFilterExpanded && (
+              <FilterDropdown setfilterInvoiceVal={setfilterInvoiceVal} />
+            )}
           </div>
 
-          <Button
-            variant="contained"
-            startIcon={<AddCircle className="h-8 scale-[1.4]" />}
-            className="my-auto flex h-fit rounded-full bg-logo  font-spartan text-xs font-bold capitalize tracking-tight hover:bg-logo/80"
-          >
-            New Invoice
-          </Button>
+          <Link to="/new-invoice" className="grid place-content-center">
+            <Button
+              variant="contained"
+              startIcon={<AddCircle className="h-8 scale-[1.4]" />}
+              className=" flex h-fit rounded-full bg-logo  font-spartan text-xs font-bold capitalize tracking-tight hover:bg-logo/80"
+            >
+              New Invoice
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -87,6 +75,7 @@ function PreviewInvoice() {
             // <a href="/id">
             <Paper
               elevation={2}
+              component="article"
               square={false}
               key={index + "prevInvoice"}
               className="mb-3 grid grid-cols-12  place-content-center rounded-md border border-transparent bg-card py-4 pl-6 pr-3 text-left text-xs text-white transition hover:border-logo dark:bg-d-card"
@@ -121,10 +110,10 @@ function PreviewInvoice() {
           );
         })}
       <Pagination
-        className=" grid place-content-center pb-8 pt-6 text-logo child:child:child:text-base child:child:child:text-white  "
+        className=" grid place-content-center pt-8 text-logo child:child:child:text-base child:child:child:text-white  "
         count={10}
       />
-    </article>
+    </Box>
   );
 }
 
