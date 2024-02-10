@@ -15,6 +15,7 @@ export default {
         "d-t-bold": "#ffffff",
         "d-t-regular": "#dfe3fa",
         "d-b-form": 0,
+        "d-table": "rgb(30, 33, 57)",
 
         // "d-shadow": "0px 10px 20px rgba(0, 0, 0, 0.25)
 
@@ -39,6 +40,7 @@ export default {
         // "shadow": 0px 10px 20px rgba(72, 84, 159, 0.25),
       },
       fontSize: {
+        xxs: "0.7rem",
         "3.5xl": "1.9rem",
       },
       fontFamily: {

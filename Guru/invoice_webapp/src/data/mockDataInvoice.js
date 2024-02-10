@@ -1,6 +1,6 @@
 const mockDataInvoice = [
   {
-    id: "RT3080",
+    id: "RT80",
     createdAt: "2021-08-18",
     paymentDue: "2021-08-19",
     description: "Re-branding",
@@ -31,7 +31,7 @@ const mockDataInvoice = [
     total: 1800.9,
   },
   {
-    id: "XM9141",
+    id: "XM41",
     createdAt: "2021-08-21",
     paymentDue: "2021-09-20",
     description: "Graphic Design",
@@ -68,7 +68,7 @@ const mockDataInvoice = [
     total: 556.0,
   },
   {
-    id: "RG0314",
+    id: "RG14",
     createdAt: "2021-09-24",
     paymentDue: "2021-10-01",
     description: "Website Redesign",
@@ -99,7 +99,7 @@ const mockDataInvoice = [
     total: 14002.33,
   },
   {
-    id: "RT2080",
+    id: "RX13",
     createdAt: "2021-10-11",
     paymentDue: "2021-10-12",
     description: "Logo Concept",
@@ -130,7 +130,7 @@ const mockDataInvoice = [
     total: 102.04,
   },
   {
-    id: "AA1449",
+    id: "DG30",
     createdAt: "2021-10-7",
     paymentDue: "2021-10-14",
     description: "Re-branding",
@@ -167,7 +167,7 @@ const mockDataInvoice = [
     total: 4032.33,
   },
   {
-    id: "TY9141",
+    id: "FS20",
     createdAt: "2021-10-01",
     paymentDue: "2021-10-31",
     description: "Landing Page Design",
@@ -198,7 +198,7 @@ const mockDataInvoice = [
     total: 6155.91,
   },
   {
-    id: "FV2353",
+    id: "SQ20",
     createdAt: "2021-11-05",
     paymentDue: "2021-11-12",
     description: "Logo Re-design",

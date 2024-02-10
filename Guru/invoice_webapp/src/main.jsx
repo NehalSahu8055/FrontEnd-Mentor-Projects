@@ -8,16 +8,19 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import NewInvoice from "./components/invoices/NewInvoice.jsx";
 import RootLayout from "./layouts/RootLayout.jsx";
-import Main from "./components/Main.jsx";
-import PreviewInvoice from "./components/invoices/PreviewInvoice.jsx";
+import PreviewInvoice from "./pages/PreviewInvoice";
+import NewInvoice from "./pages/NewInvoice";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import DetailInvoice from "./components/invoices/DetailInvoice.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route path="/new-invoice" element={<NewInvoice />} />
       <Route path="/" element={<PreviewInvoice />} />
+      <Route path="/invoice" element={<DetailInvoice />} />
     </Route>,
   ),
 );
@@ -25,7 +28,9 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </StyledEngineProvider>
   </React.StrictMode>,
 );
