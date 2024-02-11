@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["*", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -16,8 +17,7 @@ export default {
         "d-t-regular": "#dfe3fa",
         "d-b-form": 0,
         "d-table": "rgb(30, 33, 57)",
-
-        // "d-shadow": "0px 10px 20px rgba(0, 0, 0, 0.25)
+        "d-divider": "#494e6e",
 
         // light mode
         main: "#f2f2f2",
@@ -31,7 +31,7 @@ export default {
         "t-regular": "#888eb0",
         logo: "rgb(124, 93, 250)",
         "logo-psuedo": "rgb(146, 119, 255)",
-        divider: "#494e6e",
+        divider: "#494e6e14",
         paid: "#33d69f",
         pending: "#ff8f00",
         draft: "rgb(223, 227, 250)",
@@ -48,6 +48,7 @@ export default {
       },
       zIndex: {
         header: "500",
+        "filter-menu": "400",
       },
       screens: {
         tab: "768px",

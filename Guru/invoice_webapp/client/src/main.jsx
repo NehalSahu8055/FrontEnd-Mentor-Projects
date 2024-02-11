@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { StyledEngineProvider } from "@mui/material";
+import {
+  Backdrop,
+  CircularProgress,
+  StyledEngineProvider,
+} from "@mui/material";
 import {
   Route,
   RouterProvider,
@@ -20,7 +24,12 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route path="/new-invoice" element={<NewInvoice />} />
       <Route path="/" element={<PreviewInvoice />} />
-      <Route path="/invoice" element={<DetailInvoice />} />
+      <Route
+        path="/invoice/:userid"
+        // loader={}
+        // load data of this route on just hovering over it before rendering
+        element={<DetailInvoice />}
+      />
     </Route>,
   ),
 );

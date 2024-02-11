@@ -266,7 +266,10 @@ function NewInvoice() {
   ];
 
   return (
-    <Box className="mx-auto max-w-2xl flex-grow text-white" component="section">
+    <Box
+      className="mx-auto max-w-2xl flex-grow text-t-bold dark:text-white"
+      component="section"
+    >
       <h2 className="sr-only">Create New Invoice</h2>
       <h3 className="text-3.5xl font-bold  "> Create Invoice</h3>
 
@@ -283,7 +286,7 @@ function NewInvoice() {
         <TextField
           // error={hasEmailError}
           // helperText={emailHelperText}
-          className="child2:before:border-b/80  childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+          className="child2:before:border-b/80  childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
           size="small"
           variant="filled"
           {...formFieldBillFromArray[0]}
@@ -296,7 +299,7 @@ function NewInvoice() {
               return (
                 <TextField
                   key={+index}
-                  className="child2:before:border-b/80 childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+                  className="child2:before:border-b/80 childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
                   size="small"
                   // error={hasEmailError}
                   // helperText={emailHelperText}
@@ -324,8 +327,8 @@ function NewInvoice() {
                 if (index >= 0 && index <= 2)
                   return (
                     <TextField
-                      key={"ID1" + index}
-                      className="child2:before:border-b/80 childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+                      key={nanoid()}
+                      className="child2:before:border-b/80 childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
                       size="small"
                       // error={hasEmailError}
                       // helperText={emailHelperText}
@@ -343,8 +346,8 @@ function NewInvoice() {
                 if (index >= 3 && index <= 5)
                   return (
                     <TextField
-                      key={"ID2" + index}
-                      className="child2:before:border-b/80 childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+                      key={nanoid()}
+                      className="child2:before:border-b/80 childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
                       size="small"
                       // error={hasEmailError}
                       // helperText={emailHelperText}
@@ -362,7 +365,7 @@ function NewInvoice() {
                   return (
                     <TextField
                       key={"ID3" + index}
-                      className="child2:before:border-b/80 childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+                      className="child2:before:border-b/80 childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
                       size="small"
                       // error={hasEmailError}
                       // helperText={emailHelperText}
@@ -375,7 +378,7 @@ function NewInvoice() {
               })}
             </div>
             <TextField
-              className="child2:before:border-b/80 childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+              className="child2:before:border-b/80 childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
               size="small"
               // error={hasEmailError}
               // helperText={emailHelperText}
@@ -387,7 +390,7 @@ function NewInvoice() {
           </Box>
         </fieldset>
         <fieldset>
-          <h3 className="text-gray pt-14 text-lg font-bold  text-white">
+          <h3 className="text-gray pt-14 text-lg font-bold  text-t-bold dark:text-white">
             ItemList
           </h3>
           <Box className="flex flex-wrap gap-3 pb-10 pt-6 tab:flex-nowrap">
@@ -395,7 +398,7 @@ function NewInvoice() {
               return (
                 <TextField
                   key={"ID4" + index}
-                  className="child2:before:border-b/80 childfocus:text-white/80 child:text-sm child:text-white/80 child2:bg-items child2:after:border-b-logo child2:dark:bg-d-items"
+                  className="child2:before:border-b/80 childfocus:text-white/80 text-t-regular child:text-sm child2:bg-items child2:after:border-b-logo dark:child:text-white/80 child2:dark:bg-d-items"
                   size="small"
                   // error={hasEmailError}
                   // helperText={emailHelperText}
@@ -406,8 +409,8 @@ function NewInvoice() {
                 />
               );
             })}
-            <IconButton>
-              <Delete className="text-md text-gray-400 transition hover:text-red-500" />
+            <IconButton className="group">
+              <Delete className="text-md text-gray-400 transition  group-hover:text-red-500" />
             </IconButton>
           </Box>
           <Button
@@ -415,7 +418,7 @@ function NewInvoice() {
               // Todo
               // billData.items.push({ sdfsa: dfasd });
             }}
-            className="h-12 w-full rounded-full font-spartan font-bold capitalize tracking-tight text-white dark:bg-d-input/80 dark:hover:bg-d-input/100 "
+            className="h-12 w-full rounded-full font-spartan font-bold capitalize tracking-tight text-slate-500 hover:bg-gray-200 dark:bg-d-input/80 dark:hover:bg-d-input/100 "
             variant="contained"
           >
             +Add New Item
