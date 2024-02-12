@@ -8,7 +8,7 @@ import { nanoid } from "nanoid";
 function DetailInvoice() {
   const { userid } = useParams();
   const invoiceData = useSelector((state) => state.invoice);
-  const [detailInvoice] = invoiceData.filter((item) => item.id == userid);
+  const detailInvoice = invoiceData.find((item) => item.id == userid);
   const {
     id,
     createdAt,
