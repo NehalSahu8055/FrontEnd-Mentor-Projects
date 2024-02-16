@@ -18,10 +18,8 @@ server.use(express.static(process.env.PUBLIC_DIR));
 // base url set
 server.use('/api/invoices', invoiceRouter);
 
-// routing
-server.get('/', (req, res) => {
-  res.json({ name: 'Nehal' });
-  res.send('<h1>Hello</h1>');
+server.use('*', (req, res) => {
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 server.listen(process.env.PORT, () => {

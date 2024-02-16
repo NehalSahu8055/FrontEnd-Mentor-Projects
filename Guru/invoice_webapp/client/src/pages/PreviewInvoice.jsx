@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -17,15 +17,23 @@ import {
 import FilterDropdown from "../components/invoices/FilterDropdown";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getInvoiceDetail } from "../features/invoiceSlice";
 import { nanoid } from "nanoid";
+import { fetchInvoiceData } from "../actions/invoice";
+import ErrorPage from "../components/shared/ErrorPage";
+import Loader from "../components/shared/Loader";
 
 function PreviewInvoice() {
-  const invoiceData = useSelector((state) => state.invoice);
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  const invoiceData = state.invoice;
+
+  useEffect(() => {
+    dispatch(fetchInvoiceData());
+  }, [dispatch]);
 
   const [isFilterExpanded, setisFilterExpanded] = useState(false);
   const [filterInvoiceVal, setfilterInvoiceVal] = useState("all");
-  return (
+  return !state.error ? (
     <Box className="mx-auto grid  max-w-2xl" component="section">
       <h2 className="sr-only">Invoice HomePage</h2>
       <div className="mb-12 flex flex-wrap justify-between  text-t-bold dark:text-white">
@@ -83,62 +91,70 @@ function PreviewInvoice() {
           </Link>
         </div>
       </div>
-      {invoiceData
-        .filter((invoice) =>
-          filterInvoiceVal == "all"
-            ? invoice
-            : invoice.status == filterInvoiceVal,
-        )
-        .map((invoice, index) => {
-          const { id, paymentDue, clientName, status, total } = invoice;
+      {!state.loading ? (
+        invoiceData
+          .filter((invoice) =>
+            filterInvoiceVal == "all"
+              ? invoice
+              : invoice.status == filterInvoiceVal,
+          )
+          .map((invoice, index) => {
+            const { id, paymentDue, clientName, status, total } = invoice;
 
-          return (
-            <Link to={`/invoice/${id}`} key={nanoid()}>
-              <Paper
-                elevation={2}
-                component="article"
-                square={false}
-                className="mb-3  flex justify-between rounded-md border  border-transparent bg-items py-4 pl-6 pr-3 text-left text-xs text-t-bold transition hover:border-logo tab:grid tab:grid-cols-12 dark:bg-d-items dark:text-white "
-              >
-                <ul className="info flex  flex-col justify-between gap-2 tab:col-span-7 tab:grid tab:grid-cols-8 tab:items-center">
-                  <li className="font-bold tab:col-span-2">
-                    <span className="text-hash">#</span>
-                    {id}
-                  </li>
-                  <li className="text-t-regular tab:col-span-3 dark:text-d-t-regular">
-                    {"Due " + paymentDue}
-                  </li>
-                  <li className="text-t-regular tab:col-span-3 dark:text-d-t-regular">
-                    {clientName}
-                  </li>
-                </ul>
-                <ul className="price flex  flex-col items-center justify-between text-right  text-[0.875rem] font-bold tab:col-span-4 tab:grid tab:grid-cols-5">
-                  <li className="-auto tab:col-span-2">{"₹" + total}</li>
-                  <li className="tab:col-span-3">
-                    <Button
-                      className={`pointer-events-none px-4 font-spartan text-[0.75rem] font-bold capitalize tracking-tight hover:bg-transparent ${status == "paid" ? "bg-paid/10 text-paid" : status == "draft" ? "bg-draft/10 text-[rgb(103,112,168)]" : "bg-pending/10 text-pending"}`}
-                      variant="contained"
-                      startIcon={<FiberManualRecord className="h-3.5 w-3.5" />}
-                      disableElevation
-                    >
-                      {status}
-                    </Button>
-                  </li>
-                </ul>
-                <IconButton className="ml-auto hidden w-fit tab:block">
-                  <ChevronRight className="text-logo" />
-                </IconButton>
-              </Paper>
-            </Link>
-          );
-        })}
+            return (
+              <Link to={`/invoice/${id}`} key={nanoid()}>
+                <Paper
+                  elevation={2}
+                  component="article"
+                  square={false}
+                  className="mb-3  flex justify-between rounded-md border  border-transparent bg-items py-4 pl-6 pr-3 text-left text-xs text-t-bold transition hover:border-logo dark:bg-d-items dark:text-white tab:grid tab:grid-cols-12 "
+                >
+                  <ul className="info flex  flex-col justify-between gap-2 tab:col-span-7 tab:grid tab:grid-cols-8 tab:items-center">
+                    <li className="font-bold tab:col-span-2">
+                      <span className="text-hash">#</span>
+                      {id}
+                    </li>
+                    <li className="text-t-regular dark:text-d-t-regular tab:col-span-3">
+                      {"Due " + paymentDue}
+                    </li>
+                    <li className="text-t-regular dark:text-d-t-regular tab:col-span-3">
+                      {clientName}
+                    </li>
+                  </ul>
+                  <ul className="price flex  flex-col items-center justify-between text-right  text-[0.875rem] font-bold tab:col-span-4 tab:grid tab:grid-cols-5">
+                    <li className="-auto tab:col-span-2">{"₹" + total}</li>
+                    <li className="tab:col-span-3">
+                      <Button
+                        className={`pointer-events-none px-4 font-spartan text-[0.75rem] font-bold capitalize tracking-tight hover:bg-transparent ${status == "paid" ? "bg-paid/10 text-paid" : status == "draft" ? "bg-draft/30 text-[rgb(103,112,168)]" : "bg-pending/10 text-pending"}`}
+                        variant="contained"
+                        startIcon={
+                          <FiberManualRecord className="h-3.5 w-3.5" />
+                        }
+                        disableElevation
+                      >
+                        {status}
+                      </Button>
+                    </li>
+                  </ul>
+                  <IconButton className="ml-auto hidden w-fit tab:block">
+                    <ChevronRight className="text-logo" />
+                  </IconButton>
+                </Paper>
+              </Link>
+            );
+          })
+      ) : (
+        <Loader classes={"mt-20"} />
+      )}
       {/* {TODO: Pagination from server */}
       {/* <Pagination
-        className=" grid pt-8 text-logo child:child:child:text-base child:child:child:text-white  "
-        count={10}
-      /> */}
+      className=" grid pt-8 text-logo child:child:child:text-base child:child:child:text-white  "
+      count={10}
+    /> */}
     </Box>
+  ) : (
+    <ErrorPage />
   );
 }
 
-export default PreviewInvoice;
+export default memo(PreviewInvoice);

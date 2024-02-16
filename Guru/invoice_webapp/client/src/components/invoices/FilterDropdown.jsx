@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   Button,
   FormControl,
@@ -17,7 +17,7 @@ function FilterDropdown({ setfilterInvoiceVal }) {
       <Paper
         elevation={4}
         id="filterMenu "
-        className="z-filter-menu absolute top-16 w-[10rem] rounded-lg bg-items py-2 pl-4 text-t-bold dark:bg-d-items  dark:text-white"
+        className="absolute top-16 z-filter-menu w-[10rem] rounded-lg bg-items py-2 pl-4 text-t-bold dark:bg-d-items  dark:text-white"
       >
         <FormControl>
           <RadioGroup
@@ -68,4 +68,4 @@ function FilterDropdown({ setfilterInvoiceVal }) {
   );
 }
 
-export default FilterDropdown;
+export default memo(FilterDropdown);

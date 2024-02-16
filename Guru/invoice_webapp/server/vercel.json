@@ -1,0 +1,31 @@
+{
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "api/invoices",
+      "dest": "server.js"
+    },
+    {
+      "src": "api/invoices/(.*)",
+      "dest": "server.js"
+    },
+
+    {
+      "src": "/",
+      "dest": "dist/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "dist/$1"
+    }
+  ]
+}

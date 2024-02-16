@@ -34,15 +34,15 @@ export const controllers = () => {
   const update = async (req, res) => {
     const id = req.params.id;
     try {
-      res.json(await Invoice.updateMany({ _id: id }, { rating: 3 }));
+      res.json(await Invoice.updateMany({ id: id }, { status: 'paid' }));
     } catch (error) {
       res.status(404).json(error);
     }
   };
   const replace = async (req, res) => {
-    const id = req.params.id;
+    // const id = req.params.id;
     try {
-      res.json(await Invoice.replaceOne({ _id: id }, req.body));
+      res.json(await Invoice.replaceOne({ id: id }, req.body));
     } catch (error) {
       res.status(404).json(error);
     }
@@ -50,7 +50,7 @@ export const controllers = () => {
   const remove = async (req, res) => {
     const id = req.params.id;
     try {
-      res.json(await Invoice.deleteMany({ _id: id }));
+      res.json(await Invoice.deleteMany({ id: id }));
     } catch (error) {
       res.status(404).json(error);
     }

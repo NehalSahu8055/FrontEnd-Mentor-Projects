@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import MoonSvg from "/images/icon-moon.svg";
 import SunSvg from "/images/icon-sun.svg";
 import { IconButton } from "@mui/material";
@@ -22,4 +22,4 @@ function ThemeToggler() {
   );
 }
 
-export default ThemeToggler;
+export default memo(ThemeToggler);
