@@ -11,11 +11,11 @@
   ],
   "routes": [
     {
-      "src": "api/invoices",
+      "src": "/api/invoices",
       "dest": "server.js"
     },
     {
-      "src": "api/invoices/(.*)",
+      "src": "/api/invoices/(.*)",
       "dest": "server.js"
     },
 
